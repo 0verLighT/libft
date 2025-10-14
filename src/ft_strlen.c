@@ -1,20 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   isalnum.c                                          :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amartel <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/13 18:29:14 by amartel           #+#    #+#             */
-/*   Updated: 2025/10/13 18:38:33 by amartel          ###   ########.fr       */
+/*   Created: 2025/10/13 16:19:46 by amartel           #+#    #+#             */
+/*   Updated: 2025/10/13 16:29:22 by amartel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
-int	ft_isalnum(int c)
+int	ft_strlen(char *s)
 {
-	if (ft_isalpha(c) == 1024 || ft_isdigit(c) == 2048)
-		return (8);
-	return (0);
+	int	i;
+
+	i = 0;
+	while (s[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
 }

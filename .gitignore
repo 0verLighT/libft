@@ -1,3 +1,5 @@
 .idea
 main.c
 *.out
+build/
+libft.a
