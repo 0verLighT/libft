@@ -12,7 +12,7 @@
 
 #include "../include/libft.h"
 
-int	ft_isalnum(int c)
+int	ft_isalnum(const int c)
 {
 	if (ft_isalpha(c) == 1024 || ft_isdigit(c) == 2048)
 		return (8);

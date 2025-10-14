@@ -2,7 +2,6 @@ CC = cc
 
 CFLAGS = -Wall -Wextra -Werror -g
 
-
 BUILD_DIR = build/
 
 OBJ= $(subst $(SRC_DIR),$(BUILD_DIR),$(SRCS:.c=.o))
@@ -14,8 +13,8 @@ SRCS = \
 	$(SRC_DIR)ft_isdigit.c \
 	$(SRC_DIR)ft_isalnum.c \
 	$(SRC_DIR)ft_isascii.c \
-	$(SRC_DIR)ft_strlen.c
-
+	$(SRC_DIR)ft_strlen.c \
+	$(SRC_DIR)ft_isprint.c
 
 INCLUDE = -Iinclude
 
@@ -35,7 +34,7 @@ fclean: clean
 	rm -f $(NAME)
 
 clean:
-	rm -f $(OBJ)
+	@if [ -d "build" ]; then rm -rf build; fi;
 
 re: fclean $(NAME)
 .SILENT:
