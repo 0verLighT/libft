@@ -14,7 +14,15 @@ SRCS = \
 	$(SRC_DIR)ft_isalnum.c \
 	$(SRC_DIR)ft_isascii.c \
 	$(SRC_DIR)ft_strlen.c \
-	$(SRC_DIR)ft_isprint.c
+	$(SRC_DIR)ft_isprint.c \
+	$(SRC_DIR)ft_strchr.c \
+	$(SRC_DIR)ft_strdup.c \
+	$(SRC_DIR)ft_atoi.c \
+	$(SRC_DIR)ft_tolower.c \
+	$(SRC_DIR)ft_toupper.c \
+	$(SRC_DIR)ft_bzero.c \
+	$(SRC_DIR)ft_memcpy.c \
+	$(SRC_DIR)ft_memmove.c
 
 INCLUDE = -Iinclude
 

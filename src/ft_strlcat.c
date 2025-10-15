@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amartel <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/14 21:16:32 by amartel           #+#    #+#             */
-/*   Updated: 2025/10/15 09:48:48 by amartel          ###   ########.fr       */
+/*   Created: 2025/10/14 21:13:41 by amartel           #+#    #+#             */
+/*   Updated: 2025/10/15 09:46:55 by amartel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/libft.h"
 
-char	*ft_strchr(const char *s, int c)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	char	*ptr;
+	size_t		len;
+	char		*ptr;
+	const char	*s;
 
-	ptr = (char *)s;
-	while (*ptr)
-	{
-		if (*ptr == c)
-			return (ptr);
-		++ptr;
-	}
-	return ("\0");
+	s = src;
+	len = ft_strlen(dst);
+	ptr = dst;
+	return (d);
 }

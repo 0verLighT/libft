@@ -6,18 +6,17 @@
 /*   By: amartel <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 21:11:08 by amartel           #+#    #+#             */
-/*   Updated: 2025/10/14 21:11:09 by amartel          ###   ########.fr       */
+/*   Updated: 2025/10/15 09:42:02 by amartel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/libft.h"
 
-void    ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-    char *ptr;
-    ptr = s;
+	char	*ptr;
 
-    while (n--)
-        *ptr++ = '\0';
+	ptr = s;
+	while (n--)
+		*ptr++ = '\0';
 }
-
