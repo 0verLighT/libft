@@ -9,3 +9,10 @@
 /*   Updated: 2025/10/15 09:51:50 by amartel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "../include/libft.h"
+
+void	*memchr(const void *s, int c, size_t n)
+{
+
+}

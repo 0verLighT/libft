@@ -14,12 +14,5 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	size_t		len;
-	char		*ptr;
-	const char	*s;
 
-	s = src;
-	len = ft_strlen(dst);
-	ptr = dst;
-	return (d);
 }
