@@ -6,7 +6,7 @@
 /*   By: amartel <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 22:57:20 by amartel           #+#    #+#             */
-/*   Updated: 2025/10/15 15:44:41 by amartel          ###   ########.fr       */
+/*   Updated: 2025/10/15 15:45:34 by amartel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,13 +33,4 @@ char	*ft_strrchr(const char *s, int c)
 		++i;
 	}
 	return (&ptr[j]);
-}
-
-int main(void) {
-	char	*str;
-	int		i;
-	i = 0;
-	str = strrchr("hello hello world world", 'o');
-	printf("%s\n", str);
-	return (0);
 }
