@@ -6,20 +6,18 @@
 /*   By: amartel <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 21:13:41 by amartel           #+#    #+#             */
-/*   Updated: 2025/10/17 17:42:41 by amartel          ###   ########.fr       */
+/*   Updated: 2025/10/17 19:13:14 by amartel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
-
 #include "../include/libft.h"
 
-size_t ft_strlcat(char *dst, const char *src, size_t dstsize) {
-	size_t i;
-	size_t j;
-	size_t lensrc;
-	size_t lendst;
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+{
+	size_t	i;
+	size_t	j;
+	size_t	lensrc;
+	size_t	lendst;
 
 	lensrc = ft_strlen(src);
 	if (dstsize == 0)
@@ -27,7 +25,8 @@ size_t ft_strlcat(char *dst, const char *src, size_t dstsize) {
 	lendst = ft_strlen(dst);
 	i = lendst;
 	j = 0;
-	while (src[j] && i < dstsize - 1) {
+	while (src[j] && i < dstsize - 1)
+	{
 		dst[i] = src[j];
 		j++;
 		i++;

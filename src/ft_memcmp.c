@@ -6,13 +6,9 @@
 /*   By: amartel <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 22:58:52 by amartel           #+#    #+#             */
-/*   Updated: 2025/10/15 15:46:52 by amartel          ###   ########.fr       */
+/*   Updated: 2025/10/17 13:56:56 by amartel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <assert.h>
-#include <stdio.h>
-#include <string.h>
 
 #include "../include/libft.h"
 
