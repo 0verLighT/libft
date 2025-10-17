@@ -3,3 +3,5 @@ main.c
 *.out
 build/
 libft.a
+
+compile_commands.json
