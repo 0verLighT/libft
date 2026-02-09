@@ -18,14 +18,15 @@ if get_option('enable-asm') == true
     subdir('src/asm/arm/')
   endif
 else
-sources += [
+sources += files(
   'src/ft_atoi.c',
   'src/ft_atoi_base.c',
   'src/ft_atol.c',
-  'src/ft_strlen.c',
   'src/ft_atoll.c',
   'src/ft_bzero.c',
   'src/ft_calloc.c',
+  'src/ft_dprintf/ft_dprintf.c',
+  'src/ft_dprintf/type_handler/basic_type.c'
   'src/ft_isalnum.c',
   'src/ft_isalpha.c',
   'src/ft_isascii.c',
@@ -53,11 +54,13 @@ sources += [
   'src/ft_putstr_fd.c',
   'src/ft_split.c',
   'src/ft_strchr.c',
+  'src/ft_strcmp.c',
   'src/ft_strdup.c',
   'src/ft_striteri.c',
   'src/ft_strjoin.c',
   'src/ft_strlcat.c',
   'src/ft_strlcpy.c',
+  'src/ft_strlen.c',
   'src/ft_strmapi.c',
   'src/ft_strncmp.c',
   'src/ft_strndup.c',
@@ -67,11 +70,8 @@ sources += [
   'src/ft_substr.c',
   'src/ft_tolower.c',
   'src/ft_toupper.c',
-  'src/ft_strcmp.c',
   'src/get_next_line.c',
   'src/get_next_line_utils.c',
-  'src/ft_dprintf/ft_dprintf.c',
-  'src/ft_dprintf/type_handler/basic_type.c'
 ]
 endif
 
