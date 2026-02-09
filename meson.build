@@ -3,13 +3,26 @@ project(
   'c',
   meson_version : '>= 1.3.0',
   version : '0.1',
-  default_options : ['warning_level=3'],
+  license: 'MIT',
+  default_options : ['warning_level=3', 'optimization=3'],
 )
+cc = meson.get_compiler('c')
+cpu = host_machine.cpu_family()
 
-sources = [
+sources = []
+
+if get_option('enable-asm') == true
+  if cpu == 'x86' or cpu == 'x86_64'
+    subdir('src/asm/x86/')
+  elif cpu == 'aarch64'
+    subdir('src/asm/arm/')
+  endif
+else
+sources += [
   'src/ft_atoi.c',
   'src/ft_atoi_base.c',
   'src/ft_atol.c',
+  'src/ft_strlen.c',
   'src/ft_atoll.c',
   'src/ft_bzero.c',
   'src/ft_calloc.c',
@@ -45,7 +58,6 @@ sources = [
   'src/ft_strjoin.c',
   'src/ft_strlcat.c',
   'src/ft_strlcpy.c',
-  'src/ft_strlen.c',
   'src/ft_strmapi.c',
   'src/ft_strncmp.c',
   'src/ft_strndup.c',
@@ -61,6 +73,7 @@ sources = [
   'src/ft_dprintf/ft_dprintf.c',
   'src/ft_dprintf/type_handler/basic_type.c'
 ]
+endif
 
 includes = [include_directories('includes')]
 
