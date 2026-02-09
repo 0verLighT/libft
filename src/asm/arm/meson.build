@@ -1,3 +1,3 @@
-sources += [
-  'ft_strlen.s',
-]
+sources += files(
+  'ft_strlen.s'
+)

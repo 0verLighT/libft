@@ -1,5 +1,5 @@
 add_language('nasm', native: false)
 
-sources += [
+sources += files(
   'ft_strlen.c',
-]
+)
