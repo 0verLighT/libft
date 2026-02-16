@@ -26,7 +26,7 @@ sources += files(
   'src/ft_bzero.c',
   'src/ft_calloc.c',
   'src/ft_dprintf/ft_dprintf.c',
-  'src/ft_dprintf/type_handler/basic_type.c'
+  'src/ft_dprintf/type_handler/basic_type.c',
   'src/ft_isalnum.c',
   'src/ft_isalpha.c',
   'src/ft_isascii.c',
@@ -72,7 +72,8 @@ sources += files(
   'src/ft_toupper.c',
   'src/get_next_line.c',
   'src/get_next_line_utils.c',
-]
+)
+
 endif
 
 includes = [include_directories('includes')]
