@@ -1,6 +1,7 @@
 .global _ft_strlen
 .align 4
 
+; size_t ft_strlen(char *s)
 _ft_strlen:
 	mov x1, #0
 .loop:
