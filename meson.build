@@ -9,16 +9,7 @@ project(
 cc = meson.get_compiler('c')
 cpu = host_machine.cpu_family()
 
-sources = []
-
-if get_option('enable-asm') == true
-  if cpu == 'x86' or cpu == 'x86_64'
-    subdir('src/asm/x86/')
-  elif cpu == 'aarch64'
-    subdir('src/asm/arm/')
-  endif
-else
-sources += files(
+sources = files(
   'src/ft_atoi.c',
   'src/ft_atoi_base.c',
   'src/ft_atol.c',
@@ -53,14 +44,12 @@ sources += files(
   'src/ft_putnbr_fd.c',
   'src/ft_putstr_fd.c',
   'src/ft_split.c',
-  'src/ft_strchr.c',
   'src/ft_strcmp.c',
   'src/ft_strdup.c',
   'src/ft_striteri.c',
   'src/ft_strjoin.c',
   'src/ft_strlcat.c',
   'src/ft_strlcpy.c',
-  'src/ft_strlen.c',
   'src/ft_strmapi.c',
   'src/ft_strncmp.c',
   'src/ft_strndup.c',
@@ -74,9 +63,21 @@ sources += files(
   'src/get_next_line_utils.c',
 )
 
+if get_option('asm') == true
+  if cpu == 'x86' or cpu == 'x86_64'
+    subdir('src/asm/x86/')
+  elif cpu == 'aarch64'
+    subdir('src/asm/arm/')
+  endif
+else
+sources += files(
+  'src/ft_strchr.c',
+  'src/ft_strlen.c',
+)
+
 endif
 
-includes = [include_directories('includes')]
+includes = include_directories('includes')
 
 libft = static_library(
   'ft',

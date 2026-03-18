@@ -1,1 +1,1 @@
-option('enable-asm', type: 'boolean', value: false)
+option('asm', type: 'boolean', value: false)
