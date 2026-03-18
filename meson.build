@@ -65,9 +65,9 @@ sources = files(
 
 if get_option('asm') == true
   if cpu == 'x86' or cpu == 'x86_64'
-    subdir('src/asm/x86/')
+    subdir('src/x86_64/')
   elif cpu == 'aarch64'
-    subdir('src/asm/arm/')
+    subdir('src/aarch64/')
   endif
 else
 sources += files(
