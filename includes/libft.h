@@ -6,7 +6,7 @@
 /*   By: amartel <amartel@student.42angouleme.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 18:16:41 by amartel           #+#    #+#             */
-/*   Updated: 2026/02/01 19:41:46 by amartel          ###   ########.fr       */
+/*   Updated: 2026/03/19 18:33:12 by amartel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -277,5 +277,6 @@ char	*get_next_line(int fd);
  */
 int		ft_dprintf(int fd, const char *fmt, ...)
 		__attribute__((format(printf, 2, 3)));
-
+int	ft_abs(int v);
+long ft_labs(long v);
 #endif
