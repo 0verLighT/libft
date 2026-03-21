@@ -4,3 +4,9 @@ sources += files(
   'ft_strchr.s',
   'ft_strlen.s',
 )
+
+# include 'syscall.h'
+asm_includes += include_directories('.')
+install_headers('syscall.h')
+subdir('syscall')
+

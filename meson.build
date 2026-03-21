@@ -9,6 +9,11 @@ project(
 cc = meson.get_compiler('c')
 cpu = host_machine.cpu_family()
 
+includes = include_directories('includes')
+if get_option('asm')
+  asm_includes = []
+endif
+
 sources = files(
   'src/ft_atoi.c',
   'src/ft_atoi_base.c',
@@ -77,13 +82,11 @@ sources += files(
 
 endif
 
-includes = include_directories('includes')
-
 libft = static_library(
   'ft',
   sources,
   install : true,
-  include_directories : includes,
+  include_directories : [includes, get_option('asm') ? asm_includes : ''],
 )
 
 libft_dep = declare_dependency(include_directories : includes, link_with: libft)
