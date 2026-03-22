@@ -82,6 +82,10 @@ sources += files(
 
 endif
 
+includes = include_directories('includes')
+
+subdir('includes')
+
 libft = static_library(
   'ft',
   sources,
