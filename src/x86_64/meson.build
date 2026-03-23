@@ -1,5 +1,5 @@
-add_languages('nasm', native: true)
-
 sources += files(
-  'ft_strlen.s',
+  'ft_strlen.asm',
 )
+
+subdir('syscall')
