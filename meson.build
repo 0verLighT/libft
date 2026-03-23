@@ -65,6 +65,10 @@ sources = files(
 
 if get_option('asm') == true
   if cpu == 'x86' or cpu == 'x86_64'
+    add_languages(
+      'nasm',
+      native: false
+    )
     subdir('src/x86_64/')
   elif cpu == 'aarch64'
     subdir('src/aarch64/')
