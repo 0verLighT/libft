@@ -21,8 +21,12 @@ class Meson(BuildSystem):
         match = re.finditer(r'sources\s*\+?=\s*files\((.*?)\)', content, re.DOTALL)
 
         for m in match:
-            sources = re.findall(r"'([a-zA-Z].*)'", m.group(1))
-            self.sources.update(sources)
+            # Get also asm file need uptade of tool file
+            all_files = re.findall(r"'([a-zA-Z].*)'", m.group(1))
+
+            c_file = [f for f in all_files if f.endswith('.c')]
+
+            self.sources.update(c_file)
 
         # regex '^\s*subdir\((.*)\)' for match subdir('anything')
         subdir = re.findall(r"subdir\('(.*)'\)", content)

@@ -21,6 +21,7 @@
             python3
             python3Packages.flake8
             clang-tools
+            nasm
           ] ++ pkgs.lib.optionals pkgs.stdenv.isLinux [
             valgrind
             gdb
