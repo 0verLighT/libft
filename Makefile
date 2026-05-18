@@ -33,6 +33,7 @@ SOURCES := \
 	src/ft_split.c \
 	src/ft_strtrim.c \
 	src/ft_itoa.c \
+	src/ft_labs.c \
 	src/ft_strmapi.c \
 	src/ft_striteri.c \
 	src/ft_putchar_fd.c \

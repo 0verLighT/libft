@@ -29,6 +29,7 @@ sources = files(
   'src/ft_isprint.c',
   'src/ft_isspace.c',
   'src/ft_itoa.c',
+  'src/ft_labs.c',
   'src/ft_lstadd_back.c',
   'src/ft_lstadd_front.c',
   'src/ft_lstclear.c',
