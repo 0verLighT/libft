@@ -15,7 +15,8 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  checks:
+  norminette:
+    name: Norminette && sanity tool
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -34,8 +35,29 @@ jobs:
   makefile:
     name: Makefile
     runs-on: ubuntu-latest
-    needs: checks
+    needs: norminette
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: compile libft
         run: make -j8
+  meson:
+    name: Meson
+    runs-on: ubuntu-latest'
+    needs: norminette
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          submodules: true
+          fetch-depth: 0
+      - name: Install Python 3.12
+        uses: actions/setup-python@v6
+        with:
+          python-version: 3.12
+      - name: Install meson
+        run: |
+          python3 -m pip install meson ninja
+      - name: Meson setup and install
+        run: |
+                meson setup build --prefix=$PWD/usr
+                meson install -C build/
+    
